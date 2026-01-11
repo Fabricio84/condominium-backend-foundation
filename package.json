@@ -1,0 +1,62 @@
+{
+  "name": "condominium-backend-foundation",
+  "version": "1.0.0",
+  "description": "Backend foundation template using Express, TypeScript, Prisma and PostgreSQL, designed for modular SaaS and real-world financial systems.",
+  "keywords": [
+    "backend",
+    "backend-development",
+    "nodejs",
+    "express",
+    "typescript",
+    "prisma",
+    "postgresql",
+    "api",
+    "saas"
+  ],
+  "homepage": "https://github.com/Fabricio84/condominium-backend-foundation#readme",
+  "bugs": {
+    "url": "https://github.com/Fabricio84/condominium-backend-foundation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabricio84/condominium-backend-foundation.git"
+  },
+  "license": "MIT",
+  "author": "fabricio.abner@gmail.com",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.2.0",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jest": "^30.2.0",
+    "pino": "^10.1.1",
+    "pino-http": "^11.0.0",
+    "supertest": "^7.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-jest": "^29.4.6",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.6",
+    "@typescript-eslint/eslint-plugin": "^8.52.0",
+    "@typescript-eslint/parser": "^8.52.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4",
+    "prisma": "^7.2.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
