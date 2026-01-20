@@ -17,13 +17,14 @@ app.use(cors({
 app.use(express.json());
 
 app.use('/api', healthRouter);
+app.get("/api/docs", (_req, res) => {
+  res.redirect(302, "/api/docs/");
+});
 app.use(
   "/api/docs",
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, {
-    swaggerOptions: {
-      url: "/api/openapi.json",
-    },
+    swaggerOptions: { url: "/api/openapi.json" },
   })
 );
 app.get("/api/openapi.json", (_req, res) => {
