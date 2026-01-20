@@ -3,6 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { env } from './config/env';
 import healthRouter from './routes/health';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './config/swagger'
 import { errorHandler } from './middlewares/errorHandler';
 
 const app = express();
@@ -15,6 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use('/api', healthRouter);
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(errorHandler);
 
