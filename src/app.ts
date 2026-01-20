@@ -16,7 +16,6 @@ app.use(cors({
 }))
 app.use(express.json());
 
-app.use('/api', healthRouter);
 app.get("/api/docs", (_req, res) => {
   res.redirect(302, "/api/docs/");
 });
@@ -30,6 +29,8 @@ app.use(
 app.get("/api/openapi.json", (_req, res) => {
   res.json(swaggerSpec);
 });
+
+app.use('/api', healthRouter);
 
 app.use(errorHandler);
 
