@@ -1,3 +1,4 @@
+import path from "path";
 import swaggerJSDoc from "swagger-jsdoc";
 
 export const swaggerSpec = swaggerJSDoc({
@@ -6,8 +7,9 @@ export const swaggerSpec = swaggerJSDoc({
     info: {
       title: "Condominium Backend Foundation",
       version: "0.1.0",
-      description: "Backend foundation template (Express + TS + Prisma + PostgreSQL)",
+      description:
+        "Backend foundation template (Express + TS + Prisma + PostgreSQL)",
     },
   },
-  apis: ["./src/routes/*.ts"], // onde ele vai procurar anotações JSDoc
+  apis: [path.join(process.cwd(), "src/routes/*.ts")],
 });
