@@ -22,7 +22,7 @@ app.get("/api/docs", (_req, res) => {
 });
 app.use(
   "/api/docs",
-  swaggerUi.serve,
+  swaggerUi.serveFiles(swaggerSpec),
   swaggerUi.setup(swaggerSpec, {
     swaggerOptions: { url: "/api/openapi.json" },
   })
